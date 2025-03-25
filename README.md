@@ -1,6 +1,6 @@
 # LiveCut
 
-> **Fork 정보**: 이 프로젝트는 [eventual-recluse/LiveCut](https://github.com/eventual-recluse/LiveCut)의 포크로, 자동화된 설치 스크립트를 추가하여 Windows 및 macOS 사용자가 더 쉽게 플러그인을 설치할 수 있도록 개선했습니다.
+> **Fork Information**: This project is a fork of [eventual-recluse/LiveCut](https://github.com/eventual-recluse/LiveCut) with added automated installation scripts to make plugin installation easier for Windows and macOS users.
 
 A version of the [Livecut](https://github.com/mdsp/Livecut) beat-slicer audio plugin adapted for the [DISTRHO Plugin Framework](https://github.com/DISTRHO/DPF)
 
@@ -8,14 +8,14 @@ LiveCut uses [Dear ImGui](https://github.com/ocornut/imgui) for the GUI.
 
 ![LiveCut](https://raw.githubusercontent.com/eventual-recluse/LiveCut/master/plugins/LiveCut/LiveCut_Screenshot.png "LiveCut")<br/>
 
-# 주요 개선 사항
+# Key Improvements
 
-이 포크 프로젝트에서는 원본 LiveCut 저장소에 다음 개선 사항을 추가했습니다:
+This fork adds the following improvements to the original LiveCut repository:
 
-1. **macOS 자동 설치 스크립트**: 코드 서명, 격리 플래그 제거 등 macOS 특유의 보안 제한 우회를 자동화
-2. **Windows 자동 설치 스크립트**: Windows 환경에서 표준 플러그인 디렉토리에 자동 설치 지원
+1. **macOS Automated Installation Script**: Automates code signing, quarantine flag removal, and other macOS-specific security restriction bypasses
+2. **Windows Automated Installation Script**: Supports automatic installation to standard plugin directories on Windows
 
-자세한 설치 방법은 아래 설명을 참조하세요.
+See the installation instructions below for details.
 
 # Build instructions
 
