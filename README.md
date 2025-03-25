@@ -31,6 +31,26 @@ make -f Makefile-windows
 ```
 After building, the plugins can be found in the 'bin' folder.
 
+### Automated Installation on Windows
+For Windows users, an automated installation script is provided that will build and install the plugins to the standard plugin directories:
+
+```
+git clone --recursive https://github.com/eventual-recluse/LiveCut.git
+cd LiveCut
+mingw32-make -f Makefile-windows install-windows
+```
+
+The script will:
+1. Build all plugin formats (VST2, VST3, CLAP, LV2)
+2. Create necessary plugin directories if they don't exist
+3. Copy plugins to the standard Windows plugin directories:
+   - VST2: %USERPROFILE%\Documents\VST Plugins
+   - VST3: %COMMONPROGRAMFILES%\VST3
+   - CLAP: %COMMONPROGRAMFILES%\CLAP
+   - LV2: %USERPROFILE%\Documents\LV2
+
+After installation, restart your DAW or rescan plugins to detect the newly installed LiveCut plugins.
+
 ## Building on macOS.
 It should be possible to build on macOS using the Xcode Command Line Tools.
 
@@ -45,6 +65,24 @@ cd LiveCut
 make
 ```
 After building, the plugins can be found in the 'bin' folder.
+
+### Automated Installation on macOS
+For macOS users, an automated installation script is provided that will build and install the plugins to the correct locations. This script also handles code signing and security settings to improve compatibility with macOS DAWs (like Ableton Live).
+
+```
+git clone --recursive https://github.com/eventual-recluse/LiveCut.git
+cd LiveCut
+make install-macos
+```
+
+The script will:
+1. Build all plugin formats (VST2, VST3, CLAP, LV2)
+2. Create necessary plugin directories if they don't exist
+3. Copy plugins to the standard macOS plugin directories
+4. Apply ad-hoc code signatures to the plugins
+5. Remove quarantine flags to prevent Gatekeeper blocks
+
+After installation, restart your DAW or rescan plugins to detect the newly installed LiveCut plugins.
 
 # Credits
 [Livecut](https://github.com/mdsp/Livecut) by mdsp @ smartelectronix. Livecut Copyright 2004 by Remy Muller. GPL license.

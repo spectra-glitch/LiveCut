@@ -49,4 +49,11 @@ clean:
 
 # --------------------------------------------------------------
 
-.PHONY: dgl plugins tests
+# Windows Installation Target
+install-windows:
+	@echo "Installing LiveCut plugins for Windows..."
+	@.\install-windows.bat
+
+# --------------------------------------------------------------
+
+.PHONY: dgl plugins tests install-windows

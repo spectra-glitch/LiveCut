@@ -49,4 +49,11 @@ clean:
 
 # --------------------------------------------------------------
 
-.PHONY: dgl plugins tests
+# macOS Installation Target
+install-macos:
+	@echo "Installing LiveCut plugins for macOS..."
+	@./install-macos.sh
+
+# --------------------------------------------------------------
+
+.PHONY: dgl plugins tests install-macos
